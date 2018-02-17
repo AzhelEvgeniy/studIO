@@ -15,4 +15,20 @@ public class IndexController {
         return mv;
     }
 
+    @RequestMapping(value = "/login")
+    public ModelAndView login() {
+        ModelAndView mv = new ModelAndView("/sign/login");
+        mv.addObject("title", "Home");
+        mv.addObject("userClickHome", true);
+        return mv;
+    }
+
+    @RequestMapping(value = "/registration")
+    public ModelAndView registration() {
+        ModelAndView mv = new ModelAndView("/sign/registration");
+        mv.addObject("title", "Home");
+        mv.addObject("userClickHome", true);
+        return mv;
+    }
+
 }
