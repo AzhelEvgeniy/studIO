@@ -14,21 +14,12 @@
     <!-- Generic properties -->
     <java.version>1.8</java.version>
 
-    <!-- Web -->
-    <jsp.version>2.2</jsp.version>
-    <jstl.version>1.2</jstl.version>
-    <servlet.version>3.1.0</servlet.version>
-
     <!-- Spring -->
-    <spring-framework.version>4.2.4.RELEASE</spring-framework.version>
-    <spring-framework.data.version>1.9.1.RELEASE</spring-framework.data.version>
-    <spring-framework.security.version>4.2.0.RELEASE</spring-framework.security.version>
+    <spring-framework.version>4.3.6.RELEASE</spring-framework.version>
+    <spring-framework.data.version>1.11.10.RELEASE</spring-framework.data.version>
 
     <!-- Hibernate / JPA -->
     <hibernate.version>5.0.1.Final</hibernate.version>
-
-    <!-- Spring REST jackson JSON Processing API -->
-    <jackson.databind-version>2.9.3</jackson.databind-version>
 
   </properties>
 
@@ -47,17 +38,6 @@
 
 
   <dependencies>
-    <!-- Spring MVC -->
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-webmvc</artifactId>
-      <!--<exclusions>
-        <exclusion>
-          <groupId>commons-logging</groupId>
-          <artifactId>commons-logging</artifactId>
-        </exclusion>
-      </exclusions> -->
-    </dependency>
 
     <!--Spring Data-->
     <dependency>
@@ -74,29 +54,6 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- Spring security -->
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-core</artifactId>
-      <version>${spring-framework.security.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-config</artifactId>
-      <version>${spring-framework.security.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-web</artifactId>
-      <version>${spring-framework.security.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context-support</artifactId>
-      <version>${spring-framework.version}</version>
-    </dependency>
-
     <!--Hibernate ORM-->
     <dependency>
       <groupId>org.hibernate</groupId>
@@ -111,39 +68,12 @@
       <version>${hibernate.version}</version>
     </dependency>
 
-    <!--MySQL connector-->
+    <!--h2 sql-->
     <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-      <version>6.0.6</version>
-    </dependency>
-
-    <!-- Spring REST jackson JSON Processing API -->
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-databind</artifactId>
-      <version>${jackson.databind-version}</version>
-    </dependency>
-
-    <!-- Other Servlet Web dependencies -->
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>jstl</artifactId>
-      <version>${jstl.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>javax.servlet-api</artifactId>
-      <version>${servlet.version}</version>
-      <scope>provided</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>javax.servlet.jsp</groupId>
-      <artifactId>jsp-api</artifactId>
-      <version>${jsp.version}</version>
-      <scope>provided</scope>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>1.4.196</version>
+      <scope>test</scope>
     </dependency>
 
     <!--Test-->
@@ -166,16 +96,17 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- Spring MVC Mail Related Dependency -->
+    <!-- slf4j -->
     <dependency>
-      <groupId>javax.mail</groupId>
-      <artifactId>mail</artifactId>
-      <version>1.4.7</version>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.6.6</version>
     </dependency>
+
     <dependency>
-      <groupId>org.apache.velocity</groupId>
-      <artifactId>velocity</artifactId>
-      <version>1.7</version>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.0.9</version>
     </dependency>
 
   </dependencies>
